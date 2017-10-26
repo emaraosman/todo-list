@@ -1,0 +1,28 @@
+<% include ../partials/boilerplate %>
+
+<div class="container">
+  <a href="todo-add"><button>Add item</button></a>
+
+  <div class="task-card">
+    <% data.forEach((todo)=>{ %>
+    <ul>
+    <li>id: <%= todo.id %></li>
+    <li>Task: <%= todo.task %></li>
+    <li>Category: <%= todo.category %></li>
+    <li>Info: <%= todo.info %></li>
+    <li>Status: <%= todo.status %></li>
+    </ul>
+    <button>Info</button>
+    <button>Edit</button>
+    <button>Delete</button>
+    <br>
+    <br>
+    <% }) %>
+
+  </div>
+
+
+</div>
+
+
+<% include ../partials/end %>

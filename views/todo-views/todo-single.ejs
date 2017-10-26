@@ -1,0 +1,25 @@
+<% include ../partials/boilerplate %>
+
+<div class="container">
+  <button>add item</button>
+
+  <div class="task-card">
+
+    <ul>
+    <li>id: <%= data.id %></li>
+    <li>Task: <%= data.task %></li>
+    <li>Category: <%= data.category %></li>
+    <li>Info: <%= data.info %></li>
+    <li>Status: <%= data.status %></li>
+    </ul>
+    <br>
+    <button>Info</button>
+    <button>Edit</button>
+    <button>Delete</button>
+
+  </div>
+  
+</div>
+
+
+<% include ../partials/end %>

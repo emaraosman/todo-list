@@ -1,0 +1,24 @@
+<% include ../partials/boilerplate %>
+
+<div class="container">
+
+  <div class="task-card">
+  <div class="add">
+    <form action="todo/" method="POST">
+      <input type="text" name="task" placeholder="Task" /><br>
+      <input type="text" name="category" placeholder="Category" /><br>
+      <input type="text" name="info" placeholder="Info" /><br>
+      <input type="radio" name="status"/><br>
+      <input type="submit" value="Add" />
+    </form>
+  </div>
+
+  </div>
+
+  <a href="/todo/index">Back to list</a>
+
+
+</div>
+
+
+<% include ../partials/end %>

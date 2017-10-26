@@ -23,7 +23,7 @@ app.listen(port,()=>{
 })
 
 app.get('/',(req,res)=>{
-  // res.render('home or index')
+  // res.render('home.ejs')
   res.send('Hello world!');
 })
 
