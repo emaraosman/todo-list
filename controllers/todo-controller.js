@@ -22,7 +22,7 @@ todoController.show = (req, res) => {
       })
     }).catch(err =>{
       console.log(err)
-      res.status(500).json(err)
+      res.status(500).json({error:err})
     })
   }
 
@@ -31,12 +31,12 @@ todoController.show = (req, res) => {
       task: req.body.task,
       category: req.body.category,
       info: req.body.info,
-      status: 'False'
-    }).then((todo)=>{
-      res.send(todo)
+      status: 'False',
+    }).then(todo => {
+      res.redirect(`/todo/${todo.id}`)
     }).catch(err=>{
       console.log(err)
-      res.status(500).json(err)
+      res.status(500).json({error: err})
     })
   }
 
