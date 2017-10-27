@@ -60,7 +60,7 @@ todoController.update = (req, res) => {
     status: req.body.status,
   }, req.params.id)
   .then( todo => {
-    res.redirect(`/todo-views/${todo.id}`)
+    res.redirect(`/todo/${todo.id}`)
   }).catch(err => {
     console.log(err)
     res.status(500).json({error:err})

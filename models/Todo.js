@@ -25,11 +25,11 @@ Todo.create = todo => db.one(`
 Todo.update = (todo, id) => {
   return db.one(
     `UPDATE todo_table SET
-    task = $/task/,
-    category = $/category/,
-    info = $/info/,
-    status = $/status/
-    WHERE id = $/id/
+    task = $1,
+    category = $2,
+    info = $3,
+    status = $4
+    WHERE id = $5
     RETURNING *`,
     [todo.task, todo.category, todo.info, todo.status, id]);
 }

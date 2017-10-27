@@ -1,20 +1,21 @@
 <% include ../partials/boilerplate %>
 
 <div class="container">
-  <a href="todo/todo-add"><button>add item</button></a>
+  <a href="/todo/index"><button>Back</button></a>
+
+  <br><br>
 
   <div class="task-card">
 
     <ul>
-    <li>id: <%= data.id %></li>
+    <!-- <li>id: <%= data.id %></li> -->
     <li>Task: <%= data.task %></li>
     <li>Category: <%= data.category %></li>
     <li>Info: <%= data.info %></li>
     <li>Status: <%= data.status %></li>
     </ul>
     <br>
-    <button>Info</button>
-    <button>Edit</button>
+    <a href="/todo/<%=data.id%>/edit"><button>Edit</button></a>
     <form class="delete" action="/todo/<%= data.id %>?_method=DELETE" method="POST">
         <input class="dellink" type="submit" value="Delete">
       </form>
