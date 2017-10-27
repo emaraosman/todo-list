@@ -12,9 +12,8 @@
     <li>Info: <%= todo.info %></li>
     <li>Status: <%= todo.status %></li>
     </ul>
-    <button>Info</button>
+    <a href="/todo/<%=todo.id%>/edit"><button>Info</button></a>
     <button>Edit</button>
-    <button>Delete</button>
     <br>
     <br>
     <% }) %>

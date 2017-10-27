@@ -1,0 +1,32 @@
+<% include ../partials/boilerplate %>
+
+<div class="container">
+  <div class="edit">
+    <form action="/todo/<%= data.id%>?_method=PUT" method="POST">
+      <input
+        type="text"
+        name="task"
+        placeholder="Task"
+        value="<%= data.task %>" />
+      <input
+        type="text"
+        name="category"
+        placeholder="Category"
+        value="<%= data.category %>"  />
+      <input
+        type="text"
+        name="info"
+        placeholder="Info"
+        value="<%= data.info %>" />
+      <input
+        type="number"
+        name="status"
+        placeholder="Status"
+        value="<%= data.status %>" />
+      <input type="submit" value="Edit it!" />
+    </div>
+  </form>
+
+  <a href="/todo/<%=data.id %>">Back</a>
+</div>
+<% include ../partials/end %>

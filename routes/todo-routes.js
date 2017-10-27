@@ -13,7 +13,9 @@ todoRoutes.get('/:id', todoController.show)
 
 todoRoutes.post('/', todoController.create)
 
+todoRoutes.get('/:id/edit', todoController.edit)
 
+todoRoutes.delete('/:id', todoController.delete)
 
 
 
